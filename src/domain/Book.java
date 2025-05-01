@@ -3,10 +3,20 @@ package domain;
 public class Book {
     private String title;
     private String author;
+    private boolean isBorrowed;
 
     public Book(String name, String author) {
         this.title = name;
         this.author = author;
+        isBorrowed = false;
+    }
+
+    public void borrow() {
+        isBorrowed = true;
+    }
+
+    public void giveBack() {
+        isBorrowed = false;
     }
 
     public void setTitle(String title) {
@@ -14,7 +24,7 @@ public class Book {
     }
 
     public String getTitle() {
-        return this.title;
+        return title;
     }
 
     public void setAuthor(String author) {
@@ -22,6 +32,6 @@ public class Book {
     }
 
     public String getAuthor() {
-        return this.author;
+        return author;
     }
 }
