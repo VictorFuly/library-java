@@ -14,7 +14,8 @@ public class Book {
     public void displayInfo() {
         System.out.println("Title: " + title);
         System.out.println("Author: " + author);
-        System.out.println("Borrow: " + (borrowed ? "Available" : "Unavailable"));
+        System.out.println("Borrow: " + (borrowed ? "Unavailable" : "Available"));
+        System.out.println();
     }
     public boolean isBorrowed() {
         return borrowed;
