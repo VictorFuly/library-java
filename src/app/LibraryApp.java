@@ -22,7 +22,9 @@ public class LibraryApp {
         libraryCoolBooks.addBookToCollection(book1984);
 
         //libraryCoolBooks.displayBookCollection();
-        libraryCoolBooks.searchBook("it: the thing");
+        libraryCoolBooks.searchBook("1984");
 
+        libraryCoolBooks.removeBookToCollection(book1984);
+        libraryCoolBooks.displayBookCollection();
     }
 }

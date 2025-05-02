@@ -25,6 +25,15 @@ public class Library {
         bookCollection.add(book);
     }
 
+    public void removeBookToCollection(Book book) {
+        if (!bookCollection.contains(book)) {
+            System.out.println("Collection don't have the book!");
+            return;
+        }
+        bookCollection.remove(book);
+    }
+
+    // Search book in a foreach with variable book into List bookCollection. So, takes the book title that eguals title parameter
     public void searchBook(String title) {
         System.out.println("------ Search Result ------");
         for (Book book : bookCollection) {
@@ -42,8 +51,7 @@ public class Library {
                 book.displayInfo();
             }
         }
-
-
+        
         public void setName (String name){
             this.name = name;
         }
