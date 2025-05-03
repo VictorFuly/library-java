@@ -2,6 +2,7 @@ package app;
 
 import domain.Book;
 import domain.Library;
+import domain.Users.Client;
 
 public class LibraryApp {
     public static void main(String[] args) {
@@ -26,5 +27,8 @@ public class LibraryApp {
 
         libraryCoolBooks.removeBookToCollection(book1984);
         libraryCoolBooks.displayBookCollection();
+
+        Client client = new Client("Victor", 12345678, libraryCoolBooks);
+        client.displayInfo();
     }
 }
