@@ -1,8 +1,8 @@
 package domain.Users;
 
 public class User {
-    private String name;
-    private int registration;
+    protected String name;
+    protected int registration;
 
     public User (String name, int registration) {
         this.name = name;

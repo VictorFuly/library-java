@@ -30,5 +30,9 @@ public class LibraryApp {
 
         Client client = new Client("Victor", 12345678, libraryCoolBooks);
         client.displayInfo();
+        client.borrowBook(bookItTheThing);
+        bookItTheThing.displayInfo();
+        client.displayInfo();
+
     }
 }

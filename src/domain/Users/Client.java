@@ -14,10 +14,20 @@ public class Client extends User{
         super(name, registration);
         this.library = library;
     }
+
     public void displayInfo() {
         super.displayInfo();
         System.out.println(" | Library: " + library.getName() + " | Books Borrowed: " + booksBorrowed.size() );
 
+    }
+
+    public void borrowBook(Book book) {
+        if (book.isBorrowed()) {
+            System.out.println("The book is already borrowed!");
+            return;
+        }
+        booksBorrowed.add(book);
+        book.borrow();
     }
 
     public void setLibrary(Library library) {
