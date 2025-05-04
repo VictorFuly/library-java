@@ -18,7 +18,6 @@ public class Client extends User{
     public void displayInfo() {
         super.displayInfo();
         System.out.println(" | Library: " + library.getName() + " | Books Borrowed: " + booksBorrowed.size() );
-
     }
 
     public void borrowBook(Book book) {
@@ -41,5 +40,9 @@ public class Client extends User{
 
     public void setLibrary(Library library) {
         this.library = library;
+    }
+
+    public Library getLibrary() {
+        return library;
     }
 }

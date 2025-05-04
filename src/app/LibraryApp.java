@@ -3,6 +3,7 @@ package app;
 import domain.Book;
 import domain.Library;
 import domain.Users.Client;
+import domain.Users.Employee;
 
 public class LibraryApp {
     public static void main(String[] args) {
@@ -35,6 +36,10 @@ public class LibraryApp {
         client.giveBackBook(bookItTheThing);
         client.displayInfo();
         bookItTheThing.displayInfo();
+
+        Employee employee = new Employee("Japinha", 2345678, libraryCoolBooks, 1500);
+
+        employee.displayInfo();
 
     }
 }
