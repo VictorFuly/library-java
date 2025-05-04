@@ -26,8 +26,17 @@ public class Client extends User{
             System.out.println("The book is already borrowed!");
             return;
         }
-        booksBorrowed.add(book);
         book.borrow();
+        booksBorrowed.add(book);
+    }
+
+    public void giveBackBook(Book book) {
+        if (!booksBorrowed.contains(book)) {
+            System.out.println("You don't borrow book!");
+            return;
+        }
+        book.giveBack();
+        booksBorrowed.remove(book);
     }
 
     public void setLibrary(Library library) {

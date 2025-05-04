@@ -23,16 +23,18 @@ public class LibraryApp {
         libraryCoolBooks.addBookToCollection(book1984);
 
         //libraryCoolBooks.displayBookCollection();
-        libraryCoolBooks.searchBook("1984");
+        //libraryCoolBooks.searchBook("1984");
 
-        libraryCoolBooks.removeBookToCollection(book1984);
-        libraryCoolBooks.displayBookCollection();
+        //libraryCoolBooks.removeBookToCollection(book1984);
+        //libraryCoolBooks.displayBookCollection();
 
         Client client = new Client("Victor", 12345678, libraryCoolBooks);
-        client.displayInfo();
         client.borrowBook(bookItTheThing);
         bookItTheThing.displayInfo();
         client.displayInfo();
+        client.giveBackBook(bookItTheThing);
+        client.displayInfo();
+        bookItTheThing.displayInfo();
 
     }
 }
