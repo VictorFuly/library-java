@@ -4,6 +4,7 @@ import domain.Book;
 import domain.Library;
 import domain.Users.Client;
 import domain.Users.Employee;
+import domain.Users.User;
 
 public class LibraryApp {
     public static void main(String[] args) {
@@ -29,7 +30,9 @@ public class LibraryApp {
         //libraryCoolBooks.removeBookToCollection(book1984);
         //libraryCoolBooks.displayBookCollection();
 
-        Client client = new Client("Victor", 12345678, libraryCoolBooks);
+        Employee employee = new Employee("Japinha", 2345678, libraryCoolBooks, 1500);
+
+        Client client = employee.registerClient("Victor", 12345678, libraryCoolBooks);
         client.borrowBook(bookItTheThing);
         bookItTheThing.displayInfo();
         client.displayInfo();
@@ -37,9 +40,6 @@ public class LibraryApp {
         client.displayInfo();
         bookItTheThing.displayInfo();
 
-        Employee employee = new Employee("Japinha", 2345678, libraryCoolBooks, 1500);
-
-        employee.displayInfo();
 
     }
 }

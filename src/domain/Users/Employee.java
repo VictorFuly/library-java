@@ -22,6 +22,10 @@ public class Employee extends User{
         System.out.println(" | Library: " + library.getName() + " | Salary: R$" + salary);
     }
 
+    public Client registerClient(String name, int registration, Library library) {
+        return new Client(name, registration, library);
+    }
+
     public double getSalary() {
         return salary;
     }

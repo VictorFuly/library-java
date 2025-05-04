@@ -10,7 +10,7 @@ public class Client extends User{
     private List<Book> booksBorrowed = new ArrayList<>();
     private Library library;
 
-    public Client(String name, int registration, Library library) {
+    protected Client(String name, int registration, Library library) {
         super(name, registration);
         this.library = library;
     }
