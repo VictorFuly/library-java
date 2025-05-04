@@ -33,12 +33,7 @@ public class LibraryApp {
         Employee employee = new Employee("Japinha", 2345678, libraryCoolBooks, 1500);
 
         Client client = employee.registerClient("Victor", 12345678, libraryCoolBooks);
-        client.borrowBook(bookItTheThing);
-        bookItTheThing.displayInfo();
-        client.displayInfo();
-        client.giveBackBook(bookItTheThing);
-        client.displayInfo();
-        bookItTheThing.displayInfo();
+        libraryCoolBooks.displayClients();
 
 
     }

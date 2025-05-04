@@ -13,6 +13,7 @@ public class Client extends User{
     protected Client(String name, int registration, Library library) {
         super(name, registration);
         this.library = library;
+        library.addClient(this);
     }
 
     public void displayInfo() {
