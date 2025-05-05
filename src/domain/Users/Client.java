@@ -18,6 +18,9 @@ public class Client extends User{
 
     public void displayInfo() {
         super.displayInfo();
+        if (library == null) {
+            return;
+        }
         System.out.println(" | Library: " + library.getName() + " | Books Borrowed: " + booksBorrowed.size() );
     }
 

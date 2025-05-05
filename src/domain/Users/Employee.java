@@ -23,7 +23,19 @@ public class Employee extends User{
     }
 
     public Client registerClient(String name, int registration, Library library) {
+        if (this.library != library) {
+            System.out.println("This employee don't work in same library!");
+            return null;
+        }
         return new Client(name, registration, library);
+    }
+
+    public void removeClient(Client client) {
+        if (library != client.getLibrary()) {
+            System.out.println("This employee don't work in same library!");
+            return;
+        }
+        library.removeCLient(client);
     }
 
     public double getSalary() {

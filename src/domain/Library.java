@@ -65,6 +65,7 @@ public class Library {
                 return;
             }
             clientList.remove(client);
+            client.setLibrary(null);
         }
 
         // Search book in a foreach with variable book into List bookCollection. So, takes the book title that eguals title parameter

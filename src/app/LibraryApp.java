@@ -18,6 +18,7 @@ public class LibraryApp {
          **/
 
         Library libraryCoolBooks = new Library("Cool Books", "Washigton, 405");
+        Library libraryReadRight = new Library("Read Ridght", "Copacabana, 505");
         //libraryCoolBooks.displayInfo();
 
         libraryCoolBooks.addBookToCollection(bookItTheThing);
@@ -31,10 +32,12 @@ public class LibraryApp {
         //libraryCoolBooks.displayBookCollection();
 
         Employee employee = new Employee("Japinha", 2345678, libraryCoolBooks, 1500);
+        Employee employee2 = new Employee("Giovanna", 456123, libraryReadRight, 1500);
 
         Client client = employee.registerClient("Victor", 12345678, libraryCoolBooks);
-        libraryCoolBooks.displayClients();
-
+         client.displayInfo();
+         employee.removeClient(client);
+         client.displayInfo();
 
     }
 }
